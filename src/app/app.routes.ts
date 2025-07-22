@@ -3,14 +3,14 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'student',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
   {
-    path: 'student',
+    path: 'dashboard',
     loadComponent: () =>
-      import('./pages/student/student-list/student-list').then(
-        (c) => c.StudentList
+      import('./pages/dashboard/dashboard').then(
+        (c) => c.Dashboard
       ),
   }
 ];
