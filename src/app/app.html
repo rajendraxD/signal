@@ -1,2 +1,65 @@
-<app-header />
-<router-outlet />
+<!-- <app-header /> -->
+<!-- <router-outlet /> -->
+
+<div class="container mt-4">
+    <h2>User Management {{ userStore.users().length }}</h2>
+    <div class="shadow-sm rounded bg-white p-4 mb-4">
+        <form [formGroup]="userForm" (ngSubmit)="onSave()">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <label for="name"></label>
+                    <input formControlName="name" type="text" class="form-control" placeholder="name">
+                </div>
+                <div class="col-md-6">
+                    <label for="age"></label>
+                    <input formControlName="age" type="number" class="form-control" placeholder="age">
+                </div>
+                <div class="col-md-6">
+                    <label for="email"></label>
+                    <input formControlName="email" type="email" class="form-control" placeholder="email">
+                    <small *ngIf="this.userForm.invalid" class="form-text text-muted">{{ 'Hint: xyz@gmail.com' }}</small>  <!-- Hint/Help Text -->
+                </div>
+                <div class="col-md-6">
+                    <label for="gender"></label>
+                    <select formControlName="gender" class="form-control">
+                        <option value="">Select Gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary me-3">{{ selectedUser?'Update':'Submit' }}</button>
+                    <button type="button" class="btn btn-secondary" (click)="onClear()">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table table-hover table-bordered shadow-sm rounded">
+        <thead>
+            <tr>
+                <th>S NO</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @for (user of userStore.users(); track $index) {
+            <tr>
+                <td>{{ $index+1 }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.gender }}</td>
+                <td>
+                    <button type="button" class="btn btn-info me-2" (click)="onEditUser(user)">Edit</button>
+                    <button type="button" class="btn btn-danger" (click)="onDeleteUser(user)">Delete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
