@@ -8,12 +8,12 @@ import { User } from './core/models/interface/user';
 
 @Component({
   selector: 'app-root',
-  imports: [shardModule],
+  imports: [ shardModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('signal');
+  protected readonly title = signal('jsonserver-api');
   userForm!: FormGroup;
   userStore!: UserStore;
   selectedUser: User | null = null;

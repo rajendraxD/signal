@@ -1,1 +1,78 @@
-{}
+{
+  "Student": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "age": 20,
+      "email": "john.doe@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "age": 22,
+      "email": "jane.smith@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Peter Jones",
+      "age": 21,
+      "email": "peter.jones@example.com"
+    },
+    {
+      "id": "9a8c",
+      "name": "Seth Downs",
+      "age": 77,
+      "email": "jaceqyraxu@mailinator.com",
+      "gender": "M"
+    },
+    {
+      "id": "cfef",
+      "name": "Graiden Waller",
+      "age": 47,
+      "email": "rizuzo@mailinator.com",
+      "gender": "F"
+    },
+    {
+      "id": "739d",
+      "name": "Karen Alvarez",
+      "age": 86,
+      "email": "xylev@mailinator.com",
+      "gender": "M"
+    },
+    {
+      "id": "9c2a",
+      "name": "Vaughan Cardenas",
+      "age": 5,
+      "email": "xaleq@mailinator.com",
+      "gender": "F"
+    },
+    {
+      "id": "bacb",
+      "name": "Brody Adkins",
+      "age": 54,
+      "email": "toqukuvub@mailinator.com",
+      "gender": "F"
+    },
+    {
+      "id": "0e3a",
+      "name": "AMIT",
+      "age": 66,
+      "email": "qawyn@mailinator.com",
+      "gender": "M"
+    },
+    {
+      "id": "6663",
+      "name": "Oleg James",
+      "age": 12,
+      "email": "nohimiqumi@mailinator.com",
+      "gender": "F"
+    },
+    {
+      "id": "2c98",
+      "name": "Herrod Newton",
+      "age": 66,
+      "email": "tanimoqy@mailinator.com",
+      "gender": "M"
+    }
+  ]
+}

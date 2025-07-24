@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Student List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>S.NO</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (student of studentList; track $index) {
+            <tr>
+                <td>{{ $index+1 }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.age }}</td>
+                <td>{{ student.email }}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" (click)="editStudent(student.id)">Edit</button>
+                    <button class="btn btn-danger btn-sm ms-2" (click)="deleteStudent(student.id)">Delete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

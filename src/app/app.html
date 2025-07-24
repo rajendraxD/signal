@@ -70,6 +70,7 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
+                                    <th>SNO</th>
                                     <th>Name</th>
                                     <th>Age</th>
                                     <th>Email</th>
@@ -78,7 +79,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let user of userStore.users()" (dblclick)="onEditUser(user)">
+                                @for (user of userStore.users(); track $index) {
+                                <tr (dblclick)="onEditUser(user)">
+                                    <td>{{$index+1 }}</td>
                                     <td>{{ user.name }}</td>
                                     <td>{{ user.age }}</td>
                                     <td>{{ user.email }}</td>
@@ -92,6 +95,7 @@
                                         </button>
                                     </td>
                                 </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -100,3 +104,5 @@
         </div>
     </div>
 </div>
+
+<!-- <router-outlet></router-outlet> -->

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "signal": {
+    "jsonserver-api": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,10 +72,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "signal:build:production"
+              "buildTarget": "jsonserver-api:build:production"
             },
             "development": {
-              "buildTarget": "signal:build:development"
+              "buildTarget": "jsonserver-api:build:development"
             }
           },
           "defaultConfiguration": "development"
